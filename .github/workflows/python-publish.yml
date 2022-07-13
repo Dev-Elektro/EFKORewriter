@@ -24,3 +24,7 @@ jobs:
     - name: Build exe
       run: |
         pyinstaller --noconfirm --onefile --windowed --icon "img/compare.ico" --version-file "version/file_version_info.txt"  "main.py"
+    - uses: actions/upload-artifact@v2
+      with:
+        name: "EFKO Rewriter.exe"
+        path: output/main.exe
